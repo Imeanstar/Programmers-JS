@@ -9,8 +9,10 @@ function solution(numer1, denom1, numer2, denom2) {
     denom1 *= denom2;
     
     //분자는 서로 더해주고 분모는 하나로 통합
-    answer.push(numer1 + numer2);
-    answer.push(denom1);
+    // answer.push(numer1 + numer2);
+    // answer.push(denom1);
+    answer[0] = numer1 + numer2;
+    answer[1] = denom1;
 
     //분자까지 갈 때 까지 반복
     while(i <= answer[0]){
