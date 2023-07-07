@@ -1,3 +1,4 @@
+//4점
 function solution(array) {
     
     //변수 설정
