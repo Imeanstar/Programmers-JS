@@ -1,3 +1,4 @@
+//2점
 function solution(slice, n) {
     var answer = 0;
     
