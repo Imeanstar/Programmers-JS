@@ -1,3 +1,4 @@
+//2점
 function solution(x) {
     
     let i = String(x);
