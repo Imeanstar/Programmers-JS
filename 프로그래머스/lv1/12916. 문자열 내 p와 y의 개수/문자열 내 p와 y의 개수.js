@@ -1,11 +1,11 @@
+//4점
 function solution(s){
     var answer = true;
     let arr = [];
     arr = [...s];
-    let len = arr.length;
     let tmp1 = 0;
     let tmp2 = 0;
-    for(let i = 0 ; i < len ; i++){
+    for(let i = 0 ; i < arr.length ; i++){
         if(arr[i] == 'p' || arr[i] == 'P'){
             tmp1++;
         }
