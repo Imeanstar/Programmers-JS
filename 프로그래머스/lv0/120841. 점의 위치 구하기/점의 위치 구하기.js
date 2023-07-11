@@ -15,6 +15,4 @@ function solution(dot) {
             return 3;
         }
     }
-    var answer = 0;
-    return answer;
 }
