@@ -1,3 +1,5 @@
+//2점
+//for of와 sort사용
 function solution(arr, divisor) {
     var answer = [];
     
