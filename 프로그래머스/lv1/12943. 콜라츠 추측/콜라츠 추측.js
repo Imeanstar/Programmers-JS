@@ -1,3 +1,4 @@
+//6점?
 function solution(num) {
     var answer = 0;
     
