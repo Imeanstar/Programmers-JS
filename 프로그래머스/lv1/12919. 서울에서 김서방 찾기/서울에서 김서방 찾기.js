@@ -1,3 +1,5 @@
+//1점
+//for of 사용
 function solution(seoul) {
     var answer = '';
     let n = 0;
