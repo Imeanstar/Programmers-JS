@@ -1,3 +1,4 @@
+//1점
 function solution(money) {
     var answer = [];
     answer[0] = Math.floor(money/5500);
