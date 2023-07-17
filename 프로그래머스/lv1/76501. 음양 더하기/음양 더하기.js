@@ -1,3 +1,6 @@
+//1점
+//for of 쓰면 좋았을수도?
+//피곤해서 그냥 while
 function solution(absolutes, signs) {
     var answer = 123456789;
     answer = 0;
