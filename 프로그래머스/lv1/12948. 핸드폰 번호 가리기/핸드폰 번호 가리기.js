@@ -1,3 +1,5 @@
+//1점
+//split join사용
 function solution(phone_number) {
     var answer = '';
     phone_number = phone_number.split('');
