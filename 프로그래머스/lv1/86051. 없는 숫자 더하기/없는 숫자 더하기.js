@@ -1,3 +1,5 @@
+//1점
+//발상의 전환?
 function solution(numbers) {
     var answer = -1;
     answer = 45;
