@@ -1,3 +1,6 @@
+//1점
+//문제에 모르는 문법천지라서 좀 어려웠음
+//return이 아니라 console.log로 close부분에 내보내야 하는 문제
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
