@@ -1,3 +1,5 @@
+//1점
+//for of문 사용
 function solution(num_list) {
     var answer = [0,0];
     for(val of num_list){
