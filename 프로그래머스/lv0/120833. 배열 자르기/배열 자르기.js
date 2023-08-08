@@ -1,3 +1,5 @@
+//1점
+//splice로 해도 되는듯 ㄷㄷ
 function solution(numbers, num1, num2) {
     var answer = [];
     for(let i = num1 ; i <= num2 ; i++){
