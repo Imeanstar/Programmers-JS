@@ -1,3 +1,5 @@
+// 1점
+// 대부분 sort랑 map활용해서 문제 풀이
 function solution(emergency) {
     var answer = [];
     for(let i = 0 ; i < emergency.length ; i++){
