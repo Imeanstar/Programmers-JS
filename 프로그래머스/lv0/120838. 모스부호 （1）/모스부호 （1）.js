@@ -1,3 +1,5 @@
+//1점
+//뭐 유독 특이하게 푼 사람은 없고 다 비슷하게 푼듯
 function solution(letter) {
     answer = [];
     morse = { 
