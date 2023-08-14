@@ -1,26 +1,41 @@
+//12점
+//시간복잡도가 n^2라서 시간이 좀 오래걸리는거같긴함.(최적화 가능할까?)
+//제일 오래걸린 케이스가 2252ms
+
+//뭔가 어거지로 푼거같은디;
+//먼저 배열을 설정해서 어디가 안칠해져있는지 나오도록
+//제일 왼쪽에 있는 빈칸 기준으로 칠하기
+//칠하면 그 다음 제일 왼쪽에 있는 빈칸 기준으로 칠하기(무한반복)
+//오른쪽 칸 벗어날 거 같으면 줄여서 하기
+//(벗어날 거 같으면 왼쪽으로 이동시키는 방식은 어떨까?)
 function solution(n, m, section) {
     var answer = 0;
+    //모든 칸 1로 설정
     let arr = new Array(n).fill(1);
     let idx = 0;
+    //페인트 벗겨진 칸만 0 으로 채우는 작업
     for(let i = 0 ; i < section.length ; i++){
         arr[section[i]-1] = 0;
     }
-    // console.log(arr);
+    //idx가 -1이 아닌동안(idx=가장 왼 쪽의 0의 index)
     while(idx != -1){
         idx = arr.indexOf(0);
+        //붓의 크기만큼 제일 왼쪽부터 1회 칠한다
         for(let i = idx ; i < idx+m ; i++){
-            // console.log(idx);
+            //만약 붓이 벽을 벗어났거나, idx가 -1이라면
             if(i>=arr.length || idx == -1){
+                //멈춘다
+                //붓이 벽을 벗어나면 옆으로 이동해서 다시 칠하는 것도 고려해볼까?
             break;
             }
+            //멈추는 사항 없으면 칠한다(0을 1로 바꾼다)
+            //덮어써도 되니까 그냥 1로 설정
             arr[i] = 1;
         }
-        // console.log(arr)
+        //answer(칠한 횟수)에 1을 더한다
         answer ++;
     }
-    
+    //마지막에 -1 찾는 과정때문에 한 번 더 돌아서 1을 한 번 빼준다
     answer -= 1 
-    // console.log(idx);
-    // console.log(arr);
     return answer;
 }
