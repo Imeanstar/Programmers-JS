@@ -1,3 +1,5 @@
+//6점
+//이건 좀 쉬운데?
 function solution(cards1, cards2, goal) {
     var answer = 'Yes';
     
