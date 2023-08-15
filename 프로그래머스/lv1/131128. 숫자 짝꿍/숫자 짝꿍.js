@@ -1,11 +1,25 @@
+//13점
+//시간복잡도 해결이 제일 어려운 문제
+//처음에는 X랑 Y sorting해서 숫자 비교해서 result에 push하는 방식으로 했는데
+//시간초과 에러 발생
+//그래서 아쉽지만 힌트 보고 방식 변경
+//X숫자 Y숫자 배열 따로 만들어서 각 숫자 갯수 구하고 그걸로 새로운 배열 구현
+//새로운 배열은 result에 들어가야 할 숫자 갯수로 구현
+
+//그렇게 해서 기존에 n^2의 시간복잡도를 가진 코드에서
+//4n의 시간복잡도를 가진 코드로 변환되었음
+//그런데 아직도 시간초과가 발생하여서 어디가 문제인가 보았더니
+//"000"을 "0"으로 변환하는 강제형변환과정에서 문제가 발생했음
+
+//그래서 어짜피 가장 큰 수부터 result에 출력하는 거기때문에
+//result의 0번과 1번이 둘 다 0이면 "00"이상의 값이라 그냥 "0"으로 바꿔줘도 됨
+//해당 코드 넣으니 최대 700ms의 시간이 걸리지만 어쨌든 해결됨
 function solution(X, Y) {
     let arr=[];
     var answer = '';
     let Xarr = new Array(10).fill(0);
     let Yarr = new Array(10).fill(0);
     let ansarr = new Array(10).fill(0);
-    //X=X.split('').sort((a,b)=>(a-b));
-    //Y=Y.split('').sort((a,b)=>(a-b));
     X=X.split('');
     Y=Y.split('');
     xlen = X.length; ylen = Y.length;
@@ -44,7 +58,6 @@ function solution(X, Y) {
         return answer;
     }
     else{
-        //arr = arr.sort((a,b)=>(b-a));
         if(arr[0]==0 && arr[1]==0){
             return "0";
         }
