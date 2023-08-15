@@ -1,3 +1,5 @@
+//몇점이더라 8점이었나 대충 그정도
+//로직 자체는 크게 까다롭지 않은데 몇가지 예외처리하는게 살짝 헷갈린경우
 function solution(lottos, win_nums) {
     var answer = [];
     lottos = lottos.sort((a,b)=>a-b);
@@ -27,8 +29,11 @@ function solution(lottos, win_nums) {
     if(answer[0] == 7){
         answer[0] = 6;
     }
-    //if(count==0 && Zero==1){
-    //    answer = [6,6];
-    //}
+    // lottos와 win_nums의 값이 모두 공개되어있고, 모두 다른 경우를 고려하지 못하였음
+    // [1,2,3,4,5,0],[7,8,9,10,11,12]의 경우에는
+    // answer[i]가 7이면 6으로 바꿔주는 작업 진행
+    // [1,2,3,4,5,6], [7,8,9,10,11,12]의 경우에는
+    // answer[0]가 7이면 6으로 바꿔주는 작업 진행
+    // 해당 과정이 짧긴한데 최적화 가능할것같은 느낌이
     return answer;
 }
