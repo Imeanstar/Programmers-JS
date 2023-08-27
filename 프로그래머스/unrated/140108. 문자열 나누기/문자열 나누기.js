@@ -1,3 +1,4 @@
+//6점(생각보다 짜다)
 function solution(s) {
     var answer = 0;
     let temp;
@@ -10,29 +11,26 @@ function solution(s) {
         tmp1++;
         while(true){
             i++;
-            //break;
             if(s[i] == temp){
                 tmp1++;
                 if(tmp1 == tmp2){
                     i++;
                     answer++;
-                    s = s.slice(i,);
-                    //console.log('fi s : ',s);
-                    //console.log('fi i : ', i);
+                    //이건 있으면 에러날거같은데 있어도 괜찮고 없어도 괜찮네;
+                    //s = s.slice(i,);
                     break;
                 }
             }
             else{
                 tmp2++;
-                //console.log('tmp1 : ', tmp1);
-                //console.log('tmp2 : ', tmp2);
                 if(tmp1 == tmp2){
-                    //break;
                     i++;
                     answer++;
                     s = s.slice(i,);
-                    //console.log('se s : ', s);
-                    //console.log('se i : ', i);
+                    //i를 초기화해주는 이유
+                    //문자의 수가 같아져서 처음부터 비교해줘야 함
+                    //그래서 s문자열을 slice해서 변경해주고
+                    //i도 0으로 시작
                     i = 0;
                     break;
                 }
